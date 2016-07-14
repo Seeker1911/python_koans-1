@@ -18,8 +18,20 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
-    pass
+    if a == b == c:
+        print('equilateral')
+        return 'equilateral'
+    elif a == b or a == c or b == c:
+        print('isosceles') 
+        return 'isosceles'
+    else: 
+        print('scalene')
+        return 'scalene'
+            
 
+
+
+triangle(1,1,1)
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
     pass
