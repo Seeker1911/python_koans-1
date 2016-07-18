@@ -18,6 +18,14 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
+    tri_side =  sorted([a,b,c])
+    ### Why does 2 need to be the iterable compared? 0 > 1 + 2 does not work.
+    if tri_side[2] > tri_side[1] + tri_side[0] : raise TriangleError('The sum of the side lengths of any 2 sides of a triangle must exceed the length of the third side')
+
+    if tri_side[0] <= 0 : raise TriangleError('Sides cannot be 0 or less')
+
+    #if tri_side[0] < tri_side
+
     if a == b == c:
         print('equilateral')
         return 'equilateral'
@@ -28,10 +36,8 @@ def triangle(a, b, c):
         print('scalene')
         return 'scalene'
             
-
-
-
 triangle(1,1,1)
+
 # Error class used in part 2.  No need to change this code.
 class TriangleError(Exception):
     pass
