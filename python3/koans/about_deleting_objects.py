@@ -78,7 +78,7 @@ class AboutDeletingObjects(Koan):
         self.assertEqual('Senor Ninguno', cowboy.name)
 
         del cowboy.name
-        self.assertEqual('Them man with no name', cowboy.name)
+        self.assertEqual('The man with no name', cowboy.name)
 
 
     # ====================================================================
